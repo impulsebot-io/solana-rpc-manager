@@ -38,10 +38,10 @@ async function exampleUsage() {
 
         const accountInfo = await rpcManager.executeWithRetry(
             (connection) => connection.getAccountInfo(exampleAddress),
-                                                              {
-                                                                  maxRetries: 3,
-                                                                  timeoutMs: 5000
-                                                              }
+            {
+                maxRetries: 3,
+                timeoutMs: 5000
+            }
         );
 
         console.log('Account info:', accountInfo ? 'Found' : 'Not found');
@@ -51,10 +51,10 @@ async function exampleUsage() {
 
         const balance = await rpcManager.executeWithRetry(
             (connection) => connection.getTokenAccountBalance(exampleAddress),
-                                                          {
-                                                              maxRetries: 3,
-                                                              timeoutMs: 5000
-                                                          }
+            {
+                maxRetries: 3,
+                timeoutMs: 5000
+            }
         );
 
         console.log('Token balance:', balance?.value);
@@ -64,8 +64,8 @@ async function exampleUsage() {
 
         const [supply, slot, blockTime] = await Promise.all([
             rpcManager.executeWithRetry((connection) => connection.getSupply()),
-                                                            rpcManager.executeWithRetry((connection) => connection.getSlot()),
-                                                            rpcManager.executeWithRetry((connection) => connection.getBlockTime(0))
+            rpcManager.executeWithRetry((connection) => connection.getSlot()),
+            rpcManager.executeWithRetry((connection) => connection.getBlockTime(0))
         ]);
 
         console.log('Current supply:', supply.value.total);
