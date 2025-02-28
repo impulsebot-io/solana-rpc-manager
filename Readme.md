@@ -156,7 +156,7 @@ Endpoints without a protocol will be prefixed with "http://".
 
 ## Working with the Solana RPC Validator
 
-This library works well with the [Solana RPC Validator](https://github.com/yourusername/solana-rpc-validator) tool, which can automatically discover and validate Solana RPC endpoints.
+This library works well with the [Solana RPC Validator](https://github.com/impulsebot-io/solana-rpc-validator) tool, which can automatically discover and validate Solana RPC endpoints.
 
 1. Run the Solana RPC Validator to generate an `rpcHosts.json` file.
 2. Configure the RPC Manager to use this file:
