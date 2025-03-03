@@ -213,3 +213,5 @@ async function createRpcManager(config: Partial<RpcManagerConfig> = {}): Promise
 ## License
 
 MIT
+
+🤝 **Join the impulse community!** Made with ❤️ by the [impulse team](https://impulsebot.io). Together, we build better solutions.
